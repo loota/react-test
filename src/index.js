@@ -7,6 +7,12 @@ import {
 } from 'react-router-dom'
 
 class Combou extends React.Component {
+    render() {
+        return <h2>Combou</h2>
+    }
+}
+
+class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {formDisabled: false, radioSet: false, message: 'Hello React'};
@@ -77,6 +83,8 @@ class Combou extends React.Component {
           <input type="checkbox" onChange={this.disableForm}></input>
           <ul>{listItems}</ul>
           <button onClick={this.teeJotain}>Tee jotain</button>
+
+          <Combou/>
       </div>
     );
   }
@@ -85,7 +93,7 @@ class Combou extends React.Component {
 // ========================================
 
 ReactDOM.render(
-  <Combou />,
+  <Main />,
   document.getElementById('root')
 );
 
