@@ -60,6 +60,7 @@ class Main extends React.Component {
     )
     return (
       <div>
+          <h1>{this.state.message}</h1>
           <Router>
               <div>
                   <ul>
@@ -72,7 +73,7 @@ class Main extends React.Component {
               </div>
           </Router>
 
-          <h1>{this.state.message}</h1>
+          <ul>{listItems}</ul>
           <input type="text" readOnly={this.state.formDisabled} id="text"></input>
           <span>
               Raadio: {this.state.radioSet}
@@ -81,7 +82,6 @@ class Main extends React.Component {
           <input type="radio" onClick={this.setRadio} readOnly={this.state.formDisabled} name="rad" value="1"></input>
           <input type="radio" onClick={this.setRadio} readOnly={this.state.formDisabled} name="rad" value="2"></input>
           <input type="checkbox" onChange={this.disableForm}></input>
-          <ul>{listItems}</ul>
           <button onClick={this.teeJotain}>Tee jotain</button>
 
           <Combou/>
